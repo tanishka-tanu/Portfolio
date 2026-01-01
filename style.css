@@ -1512,4 +1512,58 @@ img {
     padding: 0 0.5rem;
   }
 }
+/* ===== Mobile Hero Buttons Fix ===== */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    top: 0; /* remove negative shift */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== FIX BUTTON OVERLAP (MOBILE ONLY) ===== */
+@media (max-width: 768px) {
+
+  /* Button wrapper */
+  .hero-buttons {
+    margin-bottom: 4.5rem;   /* PUSH SKILLS DOWN */
+    position: relative;
+    z-index: 5;
+  }
+
+  /* View My Work button */
+  .hero-buttons .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff7a18;
+    color: #fff;
+    border: none;
+    height: 48px;
+    padding: 0 28px;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 22px rgba(255, 122, 24, 0.35);
+  }
+
+  /* Skills section */
+  .skills,
+  .skills-container,
+  .tech-stack {
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
 
